@@ -1,0 +1,12 @@
+Revision history for Test-FITesque
+
+0.01      2008-01-22
+          * Make sure fixture objects go out of scope at end of test
+          * Ensure run_tests bails early on missing actions
+
+0.01_002  2007-07-10
+          * Add a minimum version to the Test::Builder prereq since its failure output changed
+          * Fix up some POD typos in Suite.pm
+
+0.01_001  2007-07-04
+          * First version released to the world

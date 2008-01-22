@@ -1,0 +1,30 @@
+---
+name: Test-FITesque
+version: 0.01
+author:
+  - 'Scott McWhirter <konobi@cpan.org>'
+abstract: the FITesque framework!
+license: bsd
+resources:
+  license: http://www.opensource.org/licenses/bsd-license.php
+requires:
+  Class::Data::Inheritable: 0
+  Module::Load: 0
+  Test::Builder: 0.64_01
+build_requires:
+  Test::Exception: 0
+  Test::More: 0
+provides:
+  Test::FITesque:
+    file: lib/Test/FITesque.pm
+    version: 0.01
+  Test::FITesque::Fixture:
+    file: lib/Test/FITesque/Fixture.pm
+  Test::FITesque::Suite:
+    file: lib/Test/FITesque/Suite.pm
+  Test::FITesque::Test:
+    file: lib/Test/FITesque/Test.pm
+generated_by: Module::Build version 0.2808
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2
