@@ -155,6 +155,8 @@ sub run_tests {
       my $method = $fixture_object->parse_method_string($method_string);
       die "No method exists for '$method_string'" if !defined $method;
 
+      my $test_count = $fixture_object->method_test_count($method_string) || 0;
+      print "# running $method_string ($test_count tests )\n";
       @args = $fixture_object->parse_arguments(@args);
       $fixture_object->$method(@args);
     }
