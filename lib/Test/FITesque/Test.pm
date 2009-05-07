@@ -151,12 +151,13 @@ sub run_tests {
     }
 
     for my $test_row ( @$data[ 1..( scalar(@$data) -1) ]){
+      my $Builder = $TEST_BUILDER ? $TEST_BUILDER : Test::Builder->new();
       my ($method_string, @args) = @$test_row;
       my $method = $fixture_object->parse_method_string($method_string);
       die "No method exists for '$method_string'" if !defined $method;
 
       my $test_count = $fixture_object->method_test_count($method_string) || 0;
-      print "# running $method_string ($test_count tests )\n";
+      $Builder->note( "running $method_string ($test_count tests)" );
       @args = $fixture_object->parse_arguments(@args);
       $fixture_object->$method(@args);
     }

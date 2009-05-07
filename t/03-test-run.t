@@ -17,9 +17,12 @@ Basic_test_builder_sanity: {
   $test->add('fail_this');
 
   test_out("1..4");
+  test_out("# running foo (1 tests)");
   test_out("ok 1 - foo ran just fine");
+  test_out("# running click me (2 tests)");
   test_out("ok 2 - click_me: first");
   test_out("ok 3 - click_me: second");
+  test_out("# running fail_this (1 tests)");
   test_out("not ok 4 - fail_this");
   test_err(qr{#\s+Failed\ test.*?\n?.*?at\ t/lib/Buddha/TestRun\.pm\ (?:at\ )?line 23.*\n?});
   

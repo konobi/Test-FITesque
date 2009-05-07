@@ -33,9 +33,12 @@ $test3->add('baz');
 $suite->add($inner_suite, $test3);
 
 test_out("1..6");
+test_out("# running foo (1 tests)");
 test_out("not ok 1 - foo fails");
+test_out("# running bar (2 tests)");
 test_out("ok 2 - bar: first");
 test_out("ok 3 - bar: second");
+test_out("# running baz (3 tests)");
 test_out("ok 4 - baz: first");
 test_out("ok 5 - baz: second");
 test_out("ok 6 - baz: third");

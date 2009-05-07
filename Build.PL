@@ -12,7 +12,9 @@ my $builder = Module::Build->new(
         'Test::Exception'           => 0,
     },
     requires => {
-        'Test::Builder'             => '0.64_01', # output of failure changed here
+        'Test::Builder'             => '0.86',
+            # output of failure changed at 0.64_01,
+            # note() appeared at 0.82
         'Module::Load'              => 0,
         'Class::Data::Inheritable'  => 0,
     },
