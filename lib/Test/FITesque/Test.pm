@@ -173,7 +173,7 @@ sub _load_fixture_class {
   eval {
     load $class;
   };
-  die qq{Could not load '$class' fixture} if $@;
+  die qq{Could not load '$class' fixture: $@} if $@;
   die qq{Fixture class '$class' is not a FITesque fixture} 
     if !$class->isa(q{Test::FITesque::Fixture});
 
