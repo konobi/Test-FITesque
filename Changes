@@ -1,5 +1,9 @@
 Revision history for Test-FITesque
 
+0.02      2009-05-07
+          * Add more context to class loading exceptions
+          * Add more diagnostic information to test methods (test count)
+
 0.01      2008-01-22
           * Make sure fixture objects go out of scope at end of test
           * Ensure run_tests bails early on missing actions
