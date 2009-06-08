@@ -1,5 +1,10 @@
 Revision history for Test-FITesque
 
+0.03      2009-06-08
+          * Switch to using Module::Install
+          * Revert note() changes
+          * Allow for extra debugging details to be displayed upon twiddling
+
 0.02      2009-05-07
           * Add more context to class loading exceptions
           * Add more diagnostic information to test methods (test count)

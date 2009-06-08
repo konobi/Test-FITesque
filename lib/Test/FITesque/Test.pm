@@ -7,6 +7,8 @@ use Module::Load;
 use Test::Builder;
 
 our $TEST_BUILDER;
+our $METHOD_DETAIL_VERBOSE;
+
 
 =head1 NAME
 
@@ -157,7 +159,9 @@ sub run_tests {
       die "No method exists for '$method_string'" if !defined $method;
 
       my $test_count = $fixture_object->method_test_count($method_string) || 0;
-      $Builder->note( "running $method_string ($test_count tests)" );
+      my $msg = "running '$method_string' in class '". ref($fixture_object)."' ($test_count tests)";
+      $Builder->diag( $msg ) if $METHOD_DETAIL_VERBOSE;
+
       @args = $fixture_object->parse_arguments(@args);
       $fixture_object->$method(@args);
     }
